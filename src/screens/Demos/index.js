@@ -29,20 +29,45 @@ const Demos = () => {
           </Button>
         </Col>
       </Row>
-      <img id="bottom-image" src={IMG_BOTTOM} alt="" />
-      <Row noGutters id="bottom-section" className="jusify-content-center">
-        <Col md={8} style={{ width: 500 }} className="text-center">
-          <h2>Catering should be an experience</h2>
-          <h1>We use only the finest and fhreshest ingredients</h1>
-          <h6 className="mt-32">
-            <i>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-              vestibulum euismod efficitur. Praesent sodales purus et magna
-              rutrum, ac finibus lectus gravida.
-            </i>
-          </h6>
-        </Col>
-      </Row>
+      <div
+        style={{
+          position: 'absolute',
+          bottom: 0,
+          width: '100%',
+        }}
+      >
+        <div
+          style={{
+            height: '50%',
+          }}
+        >
+          <img
+            id="bottom-image"
+            src={IMG_BOTTOM}
+            alt=""
+            style={{ width: '100%' }}
+          />
+          <Row
+            noGutters
+            id="bottom-section"
+            className="jusify-content-center"
+            style={{ height: '50%', position: 'absolute' }}
+          >
+            <Col md={8} style={{ width: 500 }} className="text-center">
+              <h2>Catering should be an experience</h2>
+              <h1>We use only the finest and fhreshest ingredients</h1>
+              <h6 className="mt-32">
+                <i>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                  vestibulum euismod efficitur. Praesent sodales purus et magna
+                  rutrum, ac finibus lectus gravida.
+                </i>
+              </h6>
+            </Col>
+          </Row>
+        </div>
+      </div>
+
       <StickyMenu />
     </div>
   );
