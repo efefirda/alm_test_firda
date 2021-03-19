@@ -12,6 +12,9 @@ const ProgressRing = (props) => {
   const strokeDashoffset =
     circumference - (-Math.abs(progress) / 100) * circumference;
 
+  let newTitle = title.split(' ');
+  newTitle.reverse();
+
   return (
     <div style={{ position: 'relative' }} className="text-center">
       <svg height={radius * 2} width={radius * 2}>
@@ -42,8 +45,9 @@ const ProgressRing = (props) => {
       <div
         style={{
           position: 'absolute',
-          top: 120,
-          left: 140,
+          top: '30%',
+          left: '40%',
+          width: 'fit-content',
         }}
       >
         <Text size="headline" color="#f07a82" bold>
@@ -52,7 +56,7 @@ const ProgressRing = (props) => {
       </div>
       <div>
         <Text size="title" color="#f07a82" bold>
-          {title}
+          {newTitle.join('  ')}
         </Text>
       </div>
     </div>
@@ -112,7 +116,7 @@ const Portfolio = () => {
   return (
     <div className="main-container">
       <Header />
-      <div style={{ background: '#312828' }}>
+      <Col md={12} style={{ background: '#312828' }}>
         <Row noGutters>
           <Col
             md={2}
@@ -126,18 +130,18 @@ const Portfolio = () => {
           </Col>
           <Col md={6}>
             <Row noGutters>
-              <Col md={6} className="justify-content-end d-flex pr-12">
+              <Col md={6} className="justify-content-center d-flex pr-12">
                 <Box />
               </Col>
-              <Col md={6} className="pl-12">
+              <Col md={6} className="pl-12 justify-content-center d-flex ">
                 <Box />
               </Col>
             </Row>
             <Row noGutters className="mt-24">
-              <Col md={6} className="justify-content-end d-flex pr-12">
+              <Col md={6} className="justify-content-center d-flex pr-12">
                 <Box />
               </Col>
-              <Col md={6} className="pl-12">
+              <Col md={6} className="pl-12 justify-content-center d-flex ">
                 <Box />
               </Col>
             </Row>
@@ -146,14 +150,14 @@ const Portfolio = () => {
             <Text size="title" color="#f07a82" bold>
               Services
             </Text>
-            <div>
+            <Col md={12} className="p-0">
               <Text color="#a3868e">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Maecenas felis lorem, placerat sit amet auctor eget, maximus nec
                 est. Maecenas vulputate commodo nisi,
               </Text>
-            </div>
-            <div className="mt-24">
+            </Col>
+            <Col md={12} className="mt-24 p-0">
               <Text color="#a3868e" size="small">
                 Praesent ante velit, ultrices nec varius vitae, posuere at quam.
                 Donec sed iaculis nisl, ac tempus urna. Etiam vel arcu sem.
@@ -165,7 +169,7 @@ const Portfolio = () => {
                 convallis, nulla nibh imperdiet lectus, eu luctus risus tellus
                 eu libero.
               </Text>
-            </div>
+            </Col>
             <Row noGutters className="mt-24 ">
               <button
                 style={{
@@ -205,7 +209,7 @@ const Portfolio = () => {
         </Row>
         <Row noGutters>
           <Col>
-            <ProgressRing progress={57} title="creativity" />
+            <ProgressRing progress={57} title="first creativity web" />
           </Col>
           <Col>
             <ProgressRing progress={60} title="creativity" />
@@ -233,7 +237,7 @@ const Portfolio = () => {
             <ProgressBar progress={50} title="creativity" />
           </Col>
         </Row>
-      </div>
+      </Col>
     </div>
   );
 };

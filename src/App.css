@@ -14,6 +14,8 @@ body {
   height: 100%;
   background-size: cover;
   padding-top: 50px;
+  background-position-x: center;
+  background-position-y: center;
 }
 
 /* header */
@@ -170,6 +172,9 @@ body {
 }
 
 /* padding */
+.p-0 {
+  padding: 0;
+}
 .p-24 {
   padding: 24px !important;
 }
@@ -231,6 +236,8 @@ body {
   background-color: #fff;
   width: 100%;
   padding: 34px 0px;
+  background-image: url('./assets/image/bottom-image.png');
+  background-size: cover;
 }
 #bottom-section > div {
   width: 500px;
@@ -261,10 +268,12 @@ body {
   border-radius: 4px;
 }
 
-#bottom-image {
+/* #bottom-image {
   width: 100%;
-  margin-top: 100px;
-}
+  background-image: url('./assets/image/bottom-image.png');
+  background-size: cover;
+  height: 100%;
+} */
 
 .menu-dropdown {
   position: fixed;
